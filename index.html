@@ -21,16 +21,16 @@
 }
 .extra-message {
   margin-top: 20px;
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 25px;
   width: 90%;
   max-width: 340px;
   border-radius: 20px;
   color: #fff;
-  font-size: 16px;
-  line-height: 1.6;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-size: 17px;
+  line-height: 1.8;
+  text-align: justify;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
   font-family: 'Dancing Script', cursive;
 }
 
@@ -43,13 +43,14 @@
       height: 100%;
       background: #0a0a20 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="20" cy="20" r="0.5" fill="white"/><circle cx="50" cy="80" r="0.8" fill="white"/><circle cx="80" cy="30" r="1" fill="white"/></svg>');
       z-index: -1;
-      animation: twinkle 5s infinite alternate;
+      animation: twinkle 0s infinite alternate;
     }
 
     @keyframes twinkle {
       0% { opacity: 0.8; }
       100% { opacity: 1; }
     }
+    
 
     .container {
       background-color: #2a2a3d;
@@ -61,6 +62,8 @@
       position: relative;
       z-index: 2;
     }
+
+
     .title {
       font-family: 'Great Vibes', cursive;
       font-size: 28px;
@@ -113,11 +116,13 @@
       animation: fadeIn 0.5s forwards;
     }
     .footer {
-      margin-top: 15px;
-      font-size: 16px;
-      color: #ffb6c1;
-      font-style: italic;
-    }
+  margin-top: 15px;
+  font-size: 17px;
+  color: #ffeef5;
+  font-style: normal;
+  font-family: 'Dancing Script', cursive;
+  line-height: 1.4;
+}
     .hearts {
       position: fixed;
       width: 100%;
@@ -192,9 +197,43 @@
 textarea::placeholder {
   color: #555;
 }
+.neon-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 380px;
+  height: 700px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 0%, transparent 70%);
+  filter: blur(40px);
+  border-radius: 25px;
+  z-index: 0;
+  animation: whiteGlow 2s infinite;
+  opacity: 0.8;
+}
+@keyframes whiteGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(1.02);
+  }
+}
+
+
   </style>
 </head>
 <body>
+  <div class="neon-background"></div>
+  <body>
+    <div class="hearts" id="hearts"></div>
+    <div class="neon-background"></div> <!-- AQUI -->
+    </div>
+  </body>
+  
+
 
   <div id="entryOverlay" style="
   position: fixed;
@@ -223,8 +262,9 @@ textarea::placeholder {
     -webkit-backdrop-filter: blur(15px);
     max-width: 300px;
   ">
-    <div style="font-size: 32px; margin-bottom: 10px;">EU  TE  AMO 🤍</div>
-    <div style="font-size: 10px; font-family: sans-serif;">CLIQUE AQUI EM BAIXO</div>
+    <div style="font-family: 'Dancing Script', cursive; font-size: 34px; margin-bottom: 10px; letter-spacing: 2px;">
+  EU TE AMO 🤍
+</div>
     <button onclick="removeOverlay()" style="
       margin-top: 20px;
       background-color: #ff69b4;
@@ -274,15 +314,22 @@ textarea::placeholder {
       <div id="seconds"></div>
     </div>
     <div class="footer">
-      "Você é o meu hoje e todos os meus amanhãs." 🤍
+      "E pensar que começou com uma simples frase de "O olhar sobrio de Bianca" 🤍
     </div>
   </div> 
     
     <div class="extra-message">
-      Meu texto: 
+          Pequeno texto para você meu amor 
       <p></p>
-      "Nosso amor cresce a cada dia como as estrelas que brilham eternamente no céu. <br/>
-      Que venham muitos anos de amor, companheirismo e aventuras juntos!" 🤍
+      "Meu amor,
+Você é a escolha mais bem feita que eu fiz na minha vida. Você é minha preciosidade, minha princesa, tudo o que eu sonhei para mim. Quero passar a vida toda ao seu lado. Que eu consiga te fazer feliz em todos esses anos, porque você é especial demais para aceitar qualquer coisa de mim.
+
+Eu amo os seus olhos, amo o seu sorriso, amo o seu jeitinho zangado e doce ao mesmo tempo. Amo tudo que envolve você, cada pequeno momento. O lugar mais confortável do mundo é dentro do seu abraço, minha pequena.
+
+Um dia, eu ouvi uma música que dizia o seguinte: "Tudo de mim ama tudo de você", e eu percebi que era exatamente aquilo que eu sentia por você. A cada batida do meu coração, eu te desejava mais e mais. Te desejava comigo, na minha vida.
+
+A vida é feita de escolhas, e eu escolhi ficar com você para sempre 🤍🤍.</nav></em>   <br/>
+
       <p></p>
       <p></p>
     </div>    
